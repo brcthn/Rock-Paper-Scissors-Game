@@ -2,7 +2,8 @@ let choices = ['rock', 'paper', 'scissors'];
 
 function playRound(playerSelection, computerSelection){
     computerSelection = computerSelection.toLowerCase();
-
+    console.log("player choice:" + playerSelection);
+    console.log("computer choice:" + computerSelection);
     if(playerSelection){
         if( playerSelection === computerSelection){
             return "It's a tie!";
@@ -41,7 +42,7 @@ function game() {
 
         const computerSelection = computerPlay();
         const result = playRound(playerSelection, computerSelection);
-
+        console.log(result)
         if (result.includes('Win')) playerScore++;
         if (result.includes('Lose')) computerScore++;
 
